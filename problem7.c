@@ -21,7 +21,7 @@ int compare(const void* a, const void* b) {
         return -1; // jobA 우선
     }
     else if (ratioA < ratioB) {
-        return 1;  // jobB 우선
+       return 1;  // jobB 우선
     }
     else {
         // 비율이 같으면 인덱스가 작은 순으로 정렬
@@ -30,39 +30,6 @@ int compare(const void* a, const void* b) {
 }
 
 int main() {
-    int t; // 테스트 케이스 수
-    scanf("%d", &t);
-
-    while (t--) {
-        int n; // 작업의 개수
-        scanf("%d", &n);
-
-        Job jobs[n];
-
-        // 각 작업에 대해 Ti와 Si 입력
-        for (int i = 0; i < n; i++) {
-            jobs[i].index = i + 1; // 작업 번호 (1-based index)
-            scanf("%d %d", &jobs[i].Ti, &jobs[i].Si);
-        }
-
-        // 작업들을 Si / Ti 비율에 따라 정렬
-        qsort(jobs, n, sizeof(Job), compare);
-
-        // 결과 출력 (작업 순서)
-        for (int i = 0; i < n; i++) {
-            printf("%d", jobs[i].index);
-            if (i < n - 1) {
-                printf(" ");
-            }
-        }
-        printf("\n");
-
-        // 테스트 케이스 사이에 빈 줄 추가
-        if (t) {
-            printf("\n");
-        }
-    }
-
-    return 0;
+    printf("modified!")
 }
 
